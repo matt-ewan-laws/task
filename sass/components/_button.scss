@@ -1,7 +1,7 @@
 
 .button {
     $warping: 5px;
-    $offset: 10px;
+    $offset: 1.3rem;
     $line-width: 3px;
 
     border: none;
@@ -11,10 +11,35 @@
     font-weight: 600;
     text-transform: uppercase;
     background: transparent;
-    width: 21.7rem;
+    width: 21.2rem;
     padding: 2.075rem 0;
     transition: all 300ms;
     cursor: pointer;
+
+    &--white {
+        color: var(--green);
+
+        &:hover {
+            &:before {
+                background-color: var(--yellow);
+            }
+        }
+
+        .button {
+            &:before,
+            &:after {
+                background-color: white;
+            }
+        }
+    }
+
+    &--small {
+        width: 14rem;
+    }
+
+    &--large {
+        width: 25rem;
+    }
 
     &__text {
         transition: inherit;
@@ -32,20 +57,25 @@
 
         &:before {
             transform: none;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
             clip-path: polygon(0% #{$warping}, calc(100% - #{$warping}) 0%, 100% 100%, 0 calc(100% - #{$warping}));
+            background-color: var(--green);
         }
     }
 
     &:before {
         content: '';
         transition: inherit;
-        background-color: purple;
+        background-color: var(--purple);
         z-index: 1;
         position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        left: 0.26rem;
+        top: 0.36rem;
+        width: calc(100% - 0.54rem);
+        height: calc(100% - 0.72rem);
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         transform: translate(#{$offset, -$offset});
     }
@@ -71,9 +101,5 @@
                            100% 100%, // bottom right outer
                            0 calc(100% - #{$warping}) // bottom left outer
                            )
-
-
-                           // 100% 100%,
-                           // 0 calc(100% - #{$warping}));
     }
 }
