@@ -1,0 +1,79 @@
+
+.button {
+    $warping: 5px;
+    $offset: 10px;
+    $line-width: 3px;
+
+    border: none;
+    position: relative;
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: transparent;
+    width: 21.7rem;
+    padding: 2.075rem 0;
+    transition: all 300ms;
+    cursor: pointer;
+
+    &__text {
+        transition: inherit;
+        position: relative;
+        z-index: 3;
+        left: $offset;
+        top: -$offset
+    }
+
+    &:hover {
+        .button__text {
+            left: 0;
+            top: 0;
+        }
+
+        &:before {
+            transform: none;
+            clip-path: polygon(0% #{$warping}, calc(100% - #{$warping}) 0%, 100% 100%, 0 calc(100% - #{$warping}));
+        }
+    }
+
+    &:before {
+        content: '';
+        transition: inherit;
+        background-color: purple;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        transform: translate(#{$offset, -$offset});
+    }
+
+    &:after {
+        content: '';
+        background-color: black;
+        transition: inherit;
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% #{$warping}, // top left
+                           calc(100% - #{$warping}) 0%, // top right
+                           calc(100% - #{$warping + $line-width}) #{$line-width}, // top right inner
+                           #{$line-width} #{$line-width + $warping}, // top left inner
+                           #{$line-width} calc(100% - #{$warping + $line-width}), // bottom left inner
+                           calc(100% - #{$line-width}) calc(100% - #{$line-width}),// bottom right inner
+                           calc(100% - #{$warping + $line-width}) #{$line-width}, // top right inner
+                           calc(100% - #{$warping}) 0, // top right
+                           100% 100%, // bottom right outer
+                           0 calc(100% - #{$warping}) // bottom left outer
+                           )
+
+
+                           // 100% 100%,
+                           // 0 calc(100% - #{$warping}));
+    }
+}

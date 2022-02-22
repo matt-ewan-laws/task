@@ -12,7 +12,8 @@ html {
     font-size: 62.5%;
 }
 
-p {
+p,
+ul {
     font-size: 1.8rem;
 }
 
@@ -44,6 +45,21 @@ h4 {
 
 h5 {
     font-size: 1.6rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background: url("/images/bullet-point.svg") no-repeat left center;
+    /* reset styles (optional): */
+    margin: 0 0 1.7rem;
+    padding: 0 0 0 1.9rem;
+    color: var(--green);
+    font-weight: 500;
 }
 
 .caption {
