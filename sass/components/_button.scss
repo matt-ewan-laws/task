@@ -16,23 +16,6 @@
     transition: all 300ms;
     cursor: pointer;
 
-    &--white {
-        color: var(--green);
-
-        &:hover {
-            &:before {
-                background-color: var(--yellow);
-            }
-        }
-
-        .button {
-            &:before,
-            &:after {
-                background-color: white;
-            }
-        }
-    }
-
     &--small {
         width: 14rem;
     }
@@ -102,4 +85,29 @@
                            0 calc(100% - #{$warping}) // bottom left outer
                            )
     }
+
+    &--white {
+        color: var(--green);
+
+        &:before,
+        &:after {
+            background-color: white;
+        }
+
+        &:hover {
+            color: white;
+
+            &:before {
+                background-color: var(--yellow);
+            }
+        }
+
+        .button {
+            &:before,
+            &:after {
+                background-color: white;
+            }
+        }
+    }
+
 }
