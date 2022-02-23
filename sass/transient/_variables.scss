@@ -5,6 +5,8 @@
     --black: #230B29;
     --white: #F7F7F7;
 
+    --top-bar-level: 1000;
+
     $warping: 1%;
 
     --standard-box-clip: polygon(0% #{$warping}, calc(100% - #{$warping}) 0%, 100% 100%, 0 calc(100% - #{$warping}));

@@ -1,0 +1,17 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--green);
+    padding: 3.8rem 3.4rem 2rem;
+    z-index: var(--top-bar-level);
+
+    &__wrap {
+        max-width: var(--site-max-width);
+        margin: 0 auto;
+    }
+}

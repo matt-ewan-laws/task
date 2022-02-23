@@ -1,0 +1,18 @@
+@mixin elation-clip($height: 100%, $warping: 1%, $variation: 1) {
+    $h-warp: $warping * 4;
+
+    @if $variation == 1 {
+        clip-path: polygon(
+            0% #{$warping},
+            calc(100% - #{$h-warp}) 0%,
+            100% #{$height},
+            0 calc(#{$height} - #{$warping}));
+    } @else if $variation == 2 {
+        clip-path: polygon(
+            #{$h-warp} 0%,
+            100% 0%,
+            100% calc(#{$height} - #{$warping}),
+            0 calc(#{$height} - #{$warping}));
+    }
+
+}

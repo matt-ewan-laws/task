@@ -1,0 +1,41 @@
+.menu-icon {
+    $line-thickness: .33rem;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: transparent;
+    border: none;
+    height: 2.13rem;
+    width: 3.3rem;
+    cursor: pointer;
+    padding: 0;
+
+    .menu-icon__line {
+        display: block;
+        background-color: white;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 5.5px;
+        }
+
+        &--top {
+            height: 0.35rem;
+            @include elation-clip($height: 0.35rem, $warping: 0.2px);
+        }
+
+        &--middle {
+            height: 0.34rem;
+            width: 2.23rem;
+            @include elation-clip($height: 0.35rem, $warping: 0.2px);
+        }
+
+        &--bottom {
+            height: 0.33rem;
+            @include elation-clip($height: 0.33rem, $warping: 0.2px);
+        }
+
+    }
+}
