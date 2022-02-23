@@ -11,11 +11,14 @@
     width: 3.3rem;
     cursor: pointer;
     padding: 0;
+    z-index: calc(var(--nav-layer) + 1);
+    transition: all 200ms;
 
-    .menu-icon__line {
+    &__line {
         display: block;
         background-color: white;
         width: 100%;
+        transition: inherit;
 
         &:not(:last-child) {
             margin-bottom: 5.5px;
@@ -36,6 +39,31 @@
             height: 0.33rem;
             @include elation-clip($height: 0.33rem, $warping: 0.2px, $slant-warp: 0.8px);
         }
+    }
 
+    &--open {
+        .menu-icon {
+            &__line {
+                $offset: 0.89rem;
+                &--top {
+                    height: 0.35rem;
+                    @include elation-clip($height: 0.35rem, $warping: 0.2px, $slant-warp: 0.8px);
+                    transform: translateY(#{$offset}) rotate(-45deg) scaleY(150%);
+                }
+
+                &--middle {
+                    height: 0.34rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include elation-clip($height: 0.35rem, $warping: 0.2px, $slant-warp: 0.8px);
+                }
+
+                &--bottom {
+                    height: 0.33rem;
+                    @include elation-clip($height: 0.33rem, $warping: 0.2px, $slant-warp: 0.8px);
+                    transform: translateY(#{-$offset}) rotate(45deg) scaleY(150%);
+                }
+            }
+        }
     }
 }
