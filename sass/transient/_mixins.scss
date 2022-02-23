@@ -1,5 +1,5 @@
-@mixin elation-clip($height: 100%, $warping: 1%, $variation: 1) {
-    $h-warp: $warping * 4;
+@mixin elation-clip($height: 100%, $warping: 1%, $slant-warp: $warping, $variation: 1) {
+    $h-warp: $slant-warp;
 
     @if $variation == 1 {
         clip-path: polygon(
