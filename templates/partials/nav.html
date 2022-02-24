@@ -1,5 +1,5 @@
 <nav class="main-nav">
-    <a href="/"><img src="/images/nav-logo.svg" alt="elation home" /></a>
+    <a href="/"><img src="/images/simple-logo.svg" alt="elation home" /></a>
 
     <ul class="main-nav__list">
         <li class="main-nav__list-item"><a href="#">Us</a></li>
@@ -10,26 +10,5 @@
         <li class="main-nav__list-item"><a href="#">Contact</a></li>
     </ul>
 
-    <ul class="main-nav__social-list">
-        <li class="social-icon">
-            <a href="www.facebook.com">
-                <img src="/images/social-icons/facebook.svg" alt="our facebook" />
-            </a>
-        </li>
-        <li class="social-icon social-icon--rotation-1">
-            <a href="www.twitter.com">
-                <img src="/images/social-icons/twitter.svg" alt="our twitter" />
-            </a>
-        </li>
-        <li class="social-icon social-icon--rotation-2">
-            <a href="www.linkedin.com">
-                <img src="/images/social-icons/linkedin.svg" alt="our linkedin" />
-            </a>
-        </li>
-        <li class="social-icon social-icon--rotation-3">
-            <a href="www.instagram.com">
-                <img src="/images/social-icons/instagram.svg" alt="our instagram" />
-            </a>
-        </li>
-    </ul>
+    {% include "partials/social.html" %}
 </nav>
