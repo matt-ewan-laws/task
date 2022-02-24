@@ -1,0 +1,40 @@
+.info-block {
+    background-image: url('/images/backgrounds/white-purple.svg');
+    background-position: center center;
+    height: 93.3rem;
+
+    &__left {
+        $left-padding: 9.36rem;
+
+        background-color: white;
+        margin: 12rem 0 0 #{-$left-padding};
+        color: var(--green);
+        width: #{get-width(6, $left-padding)};
+        padding: 6.37rem 6.6rem 7.95rem $left-padding;
+        align-self: flex-start;
+    }
+
+    &__right {
+        $left-padding: 5.58rem;
+        $right-padding: 5.1rem;
+
+        background-color: white;
+
+        align-self: flex-end;
+        padding: 6.13rem $right-padding 3.93rem $left-padding;
+        width: get-width(4, $left-padding, $right-padding);
+        color: var(--purple);
+        margin-bottom: 12rem;
+    }
+
+    &__wrap {
+        @include wrap();
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__cta {
+        margin-top: 4.05rem;
+    }
+}

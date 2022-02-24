@@ -18,27 +18,48 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    font-size: 4rem;
+.caption {
+    font-size: 4.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 5.4rem;
 
     @media only screen and (min-width: $mobile-breakpoint) {
+        font-size: 7.4rem;
+        line-height: 8.4rem;
+    }
+}
+
+
+h1,
+.h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+
+    @media only screen and (min-width: $mobile-breakpoint) {
+        line-height: 6.4rem;
         font-size: 5.4rem;
     }
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 3.4rem;
+    font-weight: 500;
 }
 
-h3 {
+h3,
+.h3 {
     font-size: 2.4rem;
 }
 
-h4 {
+h4,
+.h4 {
     font-size: 1.8rem;
 }
 
-h5 {
+h5,
+.h5 {
     font-size: 1.6rem;
 }
 
@@ -55,18 +76,6 @@ li {
     // padding: 0 0 0 1.9rem;
     // color: var(--green);
     // font-weight: 500;
-}
-
-.caption {
-    font-size: 4.4rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    line-height: 5.4rem;
-
-    @media only screen and (min-width: $mobile-breakpoint) {
-        font-size: 7.4rem;
-        line-height: 8.4rem;
-    }
 }
 
 .underline {

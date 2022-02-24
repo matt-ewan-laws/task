@@ -17,13 +17,19 @@
 
 }
 
-@function get-offset($col) {
-  $gutter-adjust: $gutter-width / ($total-cols) * ($col);
-  $base-offset: 100 / $total-cols * ($col);
-  @return calc(#{$base-offset}% + #{$gutter-adjust});
+@mixin wrap {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-@function get-width($cols) {
+@function get-offset($col) {
+    $gutter-adjust: $gutter-width / ($total-cols) * ($col);
+    $base-offset: 100 / $total-cols * ($col);
+    @return calc(#{$base-offset}% + #{$gutter-adjust});
+}
+
+@function get-width($cols, $left-padding: 0px, $right-padding: 0px) {
   $gutter-adjust: $gutter-width - ($gutter-width / ($total-cols)) * $cols;
-  @return calc((100% / #{$total-cols}) * #{$cols} - #{$gutter-adjust});
+  @return calc((100% / #{$total-cols}) * #{$cols} - #{$gutter-adjust} + #{$left-padding} + #{$right-padding});
 }
