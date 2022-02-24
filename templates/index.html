@@ -5,20 +5,13 @@
     </head>
     <body>
         {% include "partials/header.html" %}
-        <h1>Hello <span class="underline">the queick the lazy dog awesome.</span> this is a test.</h1>
-        <p>Hello, this is a <a href="#">test</a></p>
 
-        <ul>
-            <li>Sales</li>
-            <li>Culture</li>
-        </ul>
+        <main>
+            {% include "blocks/hero.html" %}
 
-        <p>Testing 12345 <span class="underline">hello</span> world</p>
-
-        <p><button class="button"><span class="button__text">Test</span></button> </p>
-
-        <p style="background-color: black; padding: 5px"><button class="button button--white"><span class="button__text">Test</span></button> </p>
+        </main>
 
         <script src="/scripts/main.js" type="text/javascript"></script>
+
     </body>
 </html>

@@ -16,3 +16,14 @@
     }
 
 }
+
+@function get-offset($col) {
+  $gutter-adjust: $gutter-width / ($total-cols) * ($col);
+  $base-offset: 100 / $total-cols * ($col);
+  @return calc(#{$base-offset}% + #{$gutter-adjust});
+}
+
+@function get-width($cols) {
+  $gutter-adjust: $gutter-width - ($gutter-width / ($total-cols)) * $cols;
+  @return calc((100% / #{$total-cols}) * #{$cols} - #{$gutter-adjust});
+}

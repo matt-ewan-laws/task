@@ -1,4 +1,77 @@
 .hero {
-    min-height: 200px;
     background-color: var(--green);
+    padding: 11.6rem 0 6.3rem;
+    padding-bottom: 6.3rem;
+    color: var(--purple);
+
+    &__wrap {
+        max-width: 127.2rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: $mobile-breakpoint) {
+            flex-direction: initial;
+        }
+    }
+
+    &__copy-side {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+
+        @media only screen and (min-width: $mobile-breakpoint) {
+            width: get-width(7);
+        }
+    }
+
+    &__image-side {
+        height: 33.2rem;
+        position: relative;
+        z-index: calc(var(--top-bar-level) + 1);
+        order: -1;
+        transform: scale(0.41);
+        transform-origin: left center;
+        margin: auto;
+
+        @media only screen and (min-width: $mobile-breakpoint) {
+            margin: 0;
+            order: initial;
+            transform-origin: left center;
+            transform: scale(0.41);
+        }
+
+        @media only screen and (min-width: 1170px) {
+            height: 81rem;
+            transform: scale(1);
+        }
+    }
+
+    &__image {
+        clip-path: url(#speech-bubbles);
+        background-image: url('/images/meeting.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 81rem;
+        transform: translateX(-50%);
+        width: 81rem;
+        top: -18rem;
+
+        @media only screen and (min-width: $mobile-breakpoint) {
+            transform: none;
+            top: -6rem;
+        }
+    }
+
+
+    &__cta {
+        margin-bottom: 6.4rem;
+    }
+
+    &__pips {
+        margin-top: auto;
+    }
 }

@@ -1,12 +1,14 @@
 .header {
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    background-color: var(--green);
-    z-index: var(--top-bar-level);
-    padding: 3.8rem 3.4rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &__logo-container {
+        background-color: var(--green);
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: var(--top-bar-level);
+        padding: 3.8rem 3.4rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

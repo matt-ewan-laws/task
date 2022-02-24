@@ -8,6 +8,7 @@
     --top-bar-level: 1000;
     --nav-layer: 1100;
     --site-max-width: 144rem;
+    --site-padding: 2rem;
 
     $warping: 1%;
 
@@ -16,3 +17,6 @@
 }
 
 $mobile-breakpoint: 600px;
+
+$gutter-width: 40px;
+$total-cols: 12;
