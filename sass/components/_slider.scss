@@ -23,8 +23,12 @@
         opacity: 0;
         flex: 0 0 100%;
         transition: inherit;
+        pointer-events: none;
+        visibility: hidden;
 
         &--show {
+            pointer-events: all;
+            visibility: visible;
             opacity: 1;
         }
     }
@@ -45,5 +49,10 @@
         &--active {
             opacity: 1;
         }
+    }
+
+    &__right-button,
+    &__left-button {
+        cursor: pointer;
     }
 }

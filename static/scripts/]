@@ -1,5 +1,3 @@
-//////// NAV
-//
 function initNav() {
   // TODO disallow scrolling when nav is open
   const menuButton = document.querySelector('.js-menu-button')
@@ -20,8 +18,6 @@ function initNav() {
   })
 }
 
-//////// SLIDER
-//
 const getCurrentSlide = (slider) => parseInt(getComputedStyle(slider).getPropertyValue('--slide'))
 const getTotalSlides = (slider) => slider.querySelectorAll('.slider__pip').length
 
@@ -87,8 +83,6 @@ function initSliders() {
   })
 }
 
-//////// BODY ONLOAD
-//
 document.body.onload = () => {
   initNav()
   initSliders()

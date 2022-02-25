@@ -1,0 +1,45 @@
+.partners {
+    --side-padding: 6.2rem;
+    color: var(--green);
+    margin: 10rem 0;
+
+    &__wrap {
+        max-width: calc(var(--site-max-width) + var(--side-padding) + 2rem);
+        margin: 0 auto;
+        padding: 0 var(--site-padding);
+        background-color: white;
+        padding: 10rem var(--side-padding) 8rem;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__slider-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4rem 0 2rem;
+    }
+
+    &__slider {
+        flex: 1 0 auto;
+    }
+
+    &__slide-arrow {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__pips {
+        text-align: center;
+    }
+
+    &__partner-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+}
