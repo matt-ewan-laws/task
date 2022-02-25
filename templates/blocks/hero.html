@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero slider">
     <svg width="0" height="0">
         <defs>
             <clipPath id="speech-bubbles">
@@ -6,27 +6,31 @@
             </clipPath>
         </defs>
     </svg>
-    <div class="hero__wrap">
+    <div class="hero__wrap slider__container">
+        <section class="hero__slide slider__slide">
+            <p>Testing</p>
+        </section>
+        <section class="hero__slide slider__slide slider__slide--show">
+            <article class="hero__copy-side">
+                <p class="caption">
+                    A <span class="underline underline--light">proven</span> formula to reinvigorate and advance your business.
+                </p>
 
-        <article class="hero__copy-side">
-            <p class="caption">
-                A <span class="underline underline--light">proven</span> formula to reinvigorate and advance your business.
-            </p>
+                <p class="hero__cta">
+                    <a href="#" class="button button--white">Learn more</a>
+                </p>
 
-            <p class="hero__cta">
-                <a href="#" class="button button--white">Learn more</a>
-            </p>
+            </article>
 
-            <div class="hero__pips">
-                <button class="pip" aria-label="slide one"></button>
-                <button class="pip" aria-label="slide two"></button>
-                <button class="pip" aria-label="slide three"></button>
+            <article class="hero__image-side">
+                <div class="hero__image" role="img" aria-label="An informal business meeting" />
+            </article>
+
+            <div class="hero__pips slider__pips">
+                <button class="slider__pip" aria-label="slide one" data-slide="0"></button>
+                <button class="slider__pip slider__pip--active" aria-label="slide two" data-slide="1"></button>
+                <button class="slider__pip" aria-label="slide three" data-slide="2"></button>
             </div>
-        </article>
-
-
-        <article class="hero__image-side">
-            <div class="hero__image" role="img" aria-label="An informal business meeting" />
-        </article>
+        </section>
     </div>
 </section>

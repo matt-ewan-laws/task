@@ -6,6 +6,11 @@
 
     &__wrap {
         @include wrap();
+        position: relative;
+        z-index: calc(var(--top-bar-level) + 1);
+    }
+
+    &__slide {
         display: flex;
         flex-direction: column;
 
@@ -63,7 +68,6 @@
             top: -6rem;
         }
     }
-
 
     &__cta {
         margin-bottom: 6.4rem;

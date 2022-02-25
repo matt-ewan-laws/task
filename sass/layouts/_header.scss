@@ -1,5 +1,14 @@
 .header {
     &__logo-container {
+        display: block;
+        position: fixed;
+        background-color: var(--green);
+        padding: 3.8rem 3.4rem 2rem;
+        z-index: calc(var(--top-bar-level) + 2);
+        border-radius: 0 0 50px 0;
+    }
+
+    &__top-bar {
         background-color: var(--green);
         position: fixed;
         width: 100vw;

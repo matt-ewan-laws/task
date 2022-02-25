@@ -1,0 +1,36 @@
+.slider {
+    --slide: 1;
+
+    &__container {
+        display: flex;
+        transform: translateX(calc(-100% * var(--slide)));
+        transition: all 100ms;
+    }
+
+    &__slide {
+        opacity: 0;
+        flex: 0 0 100%;
+
+        &--show {
+            opacity: 1;
+        }
+    }
+
+    &__pip {
+        background-color: white;
+        opacity: 0.5;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+
+        &--active {
+            opacity: 1;
+        }
+    }
+}
