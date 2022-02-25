@@ -1,0 +1,27 @@
+.products {
+    padding: 20rem 0;
+    background-color: var(--purple);
+    color: white;
+
+    &__wrap {
+        @include wrap();
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header,
+    &__copy {
+        text-align: center;
+        max-width: 92.4rem;
+        margin: auto;
+    }
+
+    &__header {
+        margin-bottom: 3rem;
+    }
+
+    &__copy {
+        margin-bottom: 12rem;
+    }
+}

@@ -1,0 +1,53 @@
+.product {
+    width: get-width(4);
+    background-color: white;
+    padding: 6.3rem 4rem 5.4rem;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        margin-right: $gutter-width;
+    }
+
+    &__header {
+        color: var(--purple);
+        display: flex;
+        align-items: center;
+
+        &-top,
+        &-bottom {
+            display: block;
+            line-height: 1;
+        }
+
+        &-top {
+            font-weight: 400;
+            font-size: 2.8rem;
+            margin-bottom: 0.4rem;
+        }
+
+        &-bottom {
+            font-size: 4rem;
+        }
+    }
+
+    &__spec-list {
+        margin-bottom: 2rem;
+    }
+
+    &__icon {
+        background: yellow;
+        width: 5.5rem;
+        height: 5.5rem;
+        margin-right: 1rem;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__cta {
+        margin-top: auto;
+    }
+}
