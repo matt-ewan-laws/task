@@ -1,4 +1,5 @@
 function initNav() {
+  // TODO disallow scrolling when nav is open
   const menuButton = document.querySelector('.js-menu-button')
 
   menuButton.addEventListener('click', function(e) {
@@ -17,15 +18,27 @@ function initNav() {
   })
 }
 
-function gotoSlide(slider, slideNumber) {
-  // getComputedStyle(slider)
-    // .setProperty('--slide', slideNumber.toString())
-  const style = getComputedStyle(slider)
-  const currentSlide = style.getPropertyValue('--slide')
-  slider.style.setProperty('--slide', slideNumber)
-  const newSlide = style.getPropertyValue('--slide')
-  console.log({ slideNumber, newSlide })
+function gotoSlide(slider, pip) {
+  // get the slide number
+  const slide = pip.dataset.slide
 
+  // set the css variable
+  slider.style.setProperty('--slide', slide)
+
+  // get the slides and pips
+  const slides = slider.querySelectorAll('.slider__slide')
+  const pips = slider.querySelectorAll('.slider__pip')
+
+  // clear the modifier classes
+  pips.forEach(pip => pip.classList.remove('slider__pip--active'))
+  slides.forEach(slide => slide.classList.remove('slider__slide--show'))
+
+  // add active and show classes
+  pips[slide].classList.add('slider__pip--active')
+  slides[slide].classList.add('slider__slide--show')
+
+  // focus for accessibility
+  slides[slide].focus()
 }
 
 function initSliders() {
@@ -35,10 +48,7 @@ function initSliders() {
     const slides = slider.querySelectorAll('.slider__slide')
 
     slider.querySelectorAll('.slider__pip')
-          .forEach(pip => {
-            const pipSlide = pip.dataset.slide
-            pip.addEventListener('click', () => gotoSlide(slider, pipSlide))
-          })
+          .forEach(pip => pip.addEventListener('click', () => gotoSlide(slider, pip)))
   })
 }
 

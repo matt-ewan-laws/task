@@ -4,12 +4,13 @@
     &__container {
         display: flex;
         transform: translateX(calc(-100% * var(--slide)));
-        transition: all 100ms;
+        transition: all 400ms;
     }
 
     &__slide {
         opacity: 0;
         flex: 0 0 100%;
+        transition: inherit;
 
         &--show {
             opacity: 1;

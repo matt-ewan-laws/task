@@ -74,6 +74,7 @@
     }
 
     &__pips {
-        margin-top: auto;
+        @include wrap();
+        // display: flex;
     }
 }
