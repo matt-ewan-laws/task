@@ -1,6 +1,18 @@
 .slider {
     --slide: 1;
 
+    &--dark-pips {
+        .slider__pip {
+            background-color: var(--purple);
+            opacity: 0.15;
+
+            &--active {
+                background-color: var(--green);
+                opacity: 1;
+            }
+        }
+    }
+
     &__container {
         display: flex;
         transform: translateX(calc(-100% * var(--slide)));

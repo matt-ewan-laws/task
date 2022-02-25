@@ -1,0 +1,26 @@
+.testimonials {
+    padding: 17.73rem 0 10rem;
+
+    &__wrap {
+        @include wrap();
+    }
+
+    &__slider {
+        width: get-width(6);
+    }
+
+    &__testimonial {
+    }
+
+    &__quote {
+        margin: 0;
+    }
+
+    &__pips {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
