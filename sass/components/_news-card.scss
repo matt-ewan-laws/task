@@ -1,0 +1,38 @@
+.news-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: get-width(4);
+
+    &:not(:last-child) {
+        margin-right: $gutter-width;
+    }
+
+    &__category {
+        color: black;
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    &__link {
+        color: inherit;
+        display: block;
+        height: 100%;
+    }
+
+    &__image {
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    &--middle {
+        transform: translateY(8rem);
+    }
+
+    &--text {
+        background-color: var(--green);
+        color: white;
+        padding: 8.7rem 5.4rem;
+    }
+}

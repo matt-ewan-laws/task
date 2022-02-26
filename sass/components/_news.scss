@@ -1,5 +1,6 @@
 .news {
     background-color: white;
+    padding: 11rem 0 19rem;
 
     &__wrap {
         @include wrap();
@@ -14,5 +15,9 @@
 
     &__title {
         margin: 0;
+    }
+
+    &__cards {
+        display: flex;
     }
 }
