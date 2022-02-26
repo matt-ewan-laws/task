@@ -1,3 +1,18 @@
+$mobile-breakpoint: 600px;
+
+$gutter-width: 4rem;
+$total-cols: 12;
+$site-max-width: 127.2rem;
+
+$site-extra-margin: 8rem;
+$site-padding: 2rem;
+$max-width: 150rem;
+
+$mobile-breakpoint: 600px;
+
+$gutter-width: 40px;
+$total-cols: 12;
+
 :root {
     --green: #0CCE6B;
     --purple: #390049;
@@ -7,9 +22,10 @@
 
     --top-bar-level: 1000;
     --nav-layer: 1100;
-    --site-max-width: 127.2rem;
+    --site-max-width: $site-max-width;
+    --site-extra-width: $site-extra-margin;
 
-    --site-padding: 2rem;
+    --site-padding: $site-padding;
 
     $warping: 1%;
 
@@ -17,7 +33,3 @@
 
 }
 
-$mobile-breakpoint: 600px;
-
-$gutter-width: 40px;
-$total-cols: 12;

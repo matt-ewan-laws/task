@@ -1,18 +1,45 @@
 .image-cta-block {
     background-image: url('/images/backgrounds/white-purple.svg');
     background-position: center center;
+    padding: 0 2rem;
+    position: relative;
 
     &__wrap {
-        max-width: calc(var(--site-max-width) + $gutter-width * 2);
+        max-width: $max-width;
         margin: 0 auto;
-        padding: 14rem 2rem;
+        padding: 14rem 0;
+    }
+
+    &__image {
+        height: 90%;
+        position: absolute;
+        bottom: -2rem;
+        width: 97.2rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left bottom;
     }
 
     &__card {
+        position: relative;
         background: var(--green);
         color: white;
-        max-width: 55.6rem;
-        padding: 4.8rem 5.26rem 6rem 9.1rem;
-        margin-left: get-offset(8)
+        max-width: 55.7rem;
+        width: get-width(6);
+        padding: 4.8rem 0 6rem 9.1rem;
+        margin-left: auto;
+    }
+
+    &__title {
+        padding-right: 5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    &__copy {
+        padding-right: $site-extra-margin;
+
+        > p {
+            margin-top: 0;
+        }
     }
 }
