@@ -1,8 +1,17 @@
 .testimonials {
-    padding: 17.73rem 0 10rem;
+    padding: 6rem 0 5rem;
+
+    @media only screen and (min-width: 768px) {
+        padding: 17.73rem 0 10rem;
+    }
 
     &__wrap {
-        @include wrap($full-width: true);
+        margin: auto;
+        padding: 2rem;
+
+        @media only screen and (min-width: 768px) {
+            @include wrap($full-width: true);
+        }
 
         display: flex;
         flex-wrap: wrap;
@@ -11,7 +20,13 @@
     }
 
     &__slider {
-        width: get-width(6);
+        @media only screen and (min-width: 768px) {
+            width: get-width(8);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            width: get-width(6);
+        }
     }
 
     &__testimonial {
@@ -45,8 +60,17 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: get-width(6);
         height: 66.3rem;
+        display: none;
+
+        @media only screen and (min-width: 768px) {
+            width: get-width(4);
+            display: block;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            width: get-width(6);
+        }
     }
 
     &__image {
