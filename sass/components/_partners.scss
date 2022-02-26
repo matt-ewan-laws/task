@@ -4,7 +4,7 @@
     margin: 10rem 0;
 
     &__wrap {
-        max-width: calc(var(--site-max-width) + var(--side-padding) + 2rem);
+        @include wrap($full-width: true);
         margin: 0 auto;
         padding: 0 var(--site-padding);
         background-color: white;

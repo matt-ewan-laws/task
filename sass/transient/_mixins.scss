@@ -17,10 +17,23 @@
 
 }
 
-@mixin wrap {
-    max-width: var(--site-max-width);
+@mixin wrap($full-width: false, $padding: true) {
+    @if $full-width {
+        max-width: var(--max-width);
+
+        @if ($padding) {
+            padding: 0 calc(var(--site-extra-margin) + var(--site-padding));
+        }
+        @else {
+            padding: 0 var(--site-padding);
+        }
+    }
+    @else {
+        max-width: var(--content-width);
+        padding: 0 var(--site-padding);
+    }
+
     margin: 0 auto;
-    padding: 0 2rem;
 }
 
 @function get-offset($col, $leading-gutter: false) {
@@ -35,7 +48,7 @@
     @return calc(#{$base-offset}% + #{$gutter-adjust} - #{$leading});
 }
 
-@function get-width($cols, $left-padding: 0px, $right-padding: 0px, $trailing-gutter: false) {
+@function get-width($cols, $left-padding: 0px, $right-padding: 0px, $trailing-gutter: false, $margin: 0px) {
     $gutter-adjust: $gutter-width - ($gutter-width / ($total-cols)) * $cols;
     $trailing: 0px;
 
@@ -43,7 +56,9 @@
         $trailing: $gutter-width;
     }
 
-    @return calc((100% / #{$total-cols}) * #{$cols}
+    $max: calc(100% - #{$margin * 2});
+
+    @return calc(#{$max} / #{$total-cols} * #{$cols}
                  - #{$gutter-adjust}
                  + #{$left-padding}
                  + #{$right-padding}
