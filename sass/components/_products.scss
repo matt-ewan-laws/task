@@ -1,27 +1,45 @@
 .products {
-    padding: 20rem 0;
     background-color: var(--purple);
     color: white;
+    padding: 4rem 0;
+
+    @media only screen and (min-width: 768px) {
+        padding: 20rem 0;
+    }
 
     &__wrap {
         @include wrap();
 
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $gutter-width;
     }
 
     &__header,
     &__copy {
         text-align: center;
-        max-width: 92.4rem;
+        padding: $site-padding;
         margin: auto;
     }
 
     &__header {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
+        max-width: 92.4rem;
+
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__copy {
-        margin-bottom: 12rem;
+        margin-bottom: 6rem;
+
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 12rem;
+        }
+
+        max-width: 80.8rem;
+        font-size: 3.4rem;
     }
 }

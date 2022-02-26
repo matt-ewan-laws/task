@@ -1,14 +1,10 @@
 .product {
-    width: get-width(4);
+    flex: 0 0 38.6rem;
     background-color: white;
     padding: 6.3rem 4rem 5.4rem;
     color: var(--black);
     display: flex;
     flex-direction: column;
-
-    &:not(:last-child) {
-        margin-right: $gutter-width;
-    }
 
     &__header {
         color: var(--purple);
