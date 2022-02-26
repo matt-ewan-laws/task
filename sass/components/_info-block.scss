@@ -1,24 +1,50 @@
 .info-block {
     background-image: url('/images/backgrounds/white-purple.svg');
     background-position: center center;
-    height: 97.3rem;
+    height: initial;
+
+    @media only screen and (min-width: 1050px) {
+        height: 97.3rem;
+    }
 
     &__wrap {
         @include wrap($full-width: true, $padding: false);
 
         display: flex;
         justify-content: space-between;
-        height: 100%;
+        flex-wrap: wrap;
+        gap: var(--site-padding);
+
+        @media only screen and (min-width: 1050px) {
+            height: 100%;
+            flex-wrap: initial;
+        }
     }
 
     &__left {
         position: relative;
         background-color: white;
-        margin: 12rem 0 0 0;
         color: var(--green);
-        width: calc(#{get-width(6, $margin: $site-extra-margin)} + #{$site-padding});
-        padding: 6.37rem $site-extra-margin 7.95rem;
+        margin: 6rem 0 0 0;
         align-self: flex-start;
+        padding: 2rem $site-extra-margin-mobile;
+
+        @media only screen and (min-width: 425px) {
+            padding: 6.37rem $site-extra-margin 7.95rem;
+        }
+
+        @media only screen and (min-width: 1170px) {
+            width: calc(#{get-width(8, $margin: $site-extra-margin)} + #{$site-padding});
+            margin: 12rem 0 0 0;
+        }
+
+        @media only screen and (min-width: 1170px) {
+            width: calc(#{get-width(7, $margin: $site-extra-margin)} + #{$site-padding});
+        }
+
+        @media only screen and (min-width: 1440px) {
+            width: calc(#{get-width(6, $margin: $site-extra-margin)} + #{$site-padding});
+        }
     }
 
     &__right {
@@ -26,10 +52,22 @@
 
         background-color: white;
         align-self: flex-end;
-        padding: 6.13rem $padding 3.93rem;
-        width: calc(#{get-width(4, $margin: $site-extra-margin)} + #{$padding});
+        padding: 2rem $site-extra-margin-mobile;
         color: var(--purple);
-        margin-bottom: 12rem;
+        margin-bottom: 6rem;
+
+        @media only screen and (min-width: 425px) {
+            padding: 6.13rem $padding 3.93rem;
+        }
+
+        @media only screen and (min-width: 1170px) {
+            margin-bottom: 12rem;
+            width: calc(#{get-width(5, $margin: $site-extra-margin)} + #{$padding});
+        }
+
+        @media only screen and (min-width: 1440px) {
+            width: calc(#{get-width(4, $margin: $site-extra-margin)} + #{$padding});
+        }
     }
 
     &__cta {
