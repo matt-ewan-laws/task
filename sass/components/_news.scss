@@ -1,0 +1,18 @@
+.news {
+    background-color: white;
+
+    &__wrap {
+        @include wrap();
+    }
+
+    &__header {
+        margin-bottom: 9rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+        margin: 0;
+    }
+}
