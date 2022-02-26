@@ -1,0 +1,31 @@
+.cta {
+    background-image: url("/images/backgrounds/white.svg");
+    background-position: center center;
+    background-color: var(--yellow);
+    color: var(--purple);
+    padding: 9rem 0 8.3rem;
+
+    &__wrap {
+        @include wrap();
+    }
+
+    &__card {
+        padding: 11.3rem 7.6rem 10rem;
+        background-color: var(--yellow);
+        width: get-width(6);
+        margin: auto;
+        text-align: center;
+    }
+
+    &__heading {
+        margin: 0 0 1.5rem;
+    }
+
+    &__caption {
+        margin: 0 0 3rem;
+    }
+
+    &__cta {
+        margin: 0;
+    }
+}
