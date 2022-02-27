@@ -1,8 +1,12 @@
 .hero {
-    background-color: var(--green);
-    padding: 11.6rem 0 6.3rem;
-    padding-bottom: 6.3rem;
     color: var(--purple);
+
+    &__clip {
+        @include block-clip($slant: 4rem, $left-side: true);
+        padding: 11.6rem 0 6.3rem;
+        padding-bottom: 6.3rem;
+        background-color: var(--green);
+    }
 
     &__wrap {
         @include wrap();
@@ -75,6 +79,8 @@
 
     &__pips {
         @include wrap();
-        // display: flex;
+        position: relative;
+        top: -8rem;
+        z-index: 1001;
     }
 }

@@ -17,6 +17,39 @@
 
 }
 
+@mixin block-clip($slant: 2rem, $left-side: false, $is-top: false) {
+    @if $is-top {
+        @if $left-side {
+            clip-path: polygon(
+                0% 0%,
+                100% #{$slant},
+                100% 100%,
+                0% 100%);
+        } @else {
+            clip-path: polygon(
+                0% #{$slant},
+                100% 0%,
+                100% 100%,
+                0% 100%);
+        }
+    } @else { // bottom slant
+        @if $left-side {
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 100%,
+                0% calc(100% - #{$slant}));
+        } @else {
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% calc(100% - #{$slant}),
+                0% 100%);
+        }
+    }
+}
+
+
 @mixin wrap($full-width: false, $padding: true) {
     @if $full-width {
         max-width: var(--max-width);
