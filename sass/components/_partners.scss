@@ -1,7 +1,11 @@
 .partners {
-    --side-padding: 6.2rem;
+    --side-padding: 2rem;
     color: var(--green);
     margin: 10rem 0;
+
+    @media only screen and (min-width: 830px) {
+        --side-padding: 6.2rem;
+    }
 
     &__wrap {
         @include wrap($full-width: true);
@@ -9,6 +13,7 @@
         padding: 0 var(--site-padding);
         background-color: white;
         padding: 10rem var(--side-padding) 8rem;
+
     }
 
     &__title {
@@ -23,12 +28,18 @@
     }
 
     &__slider {
-        flex: 1 0 auto;
+        @media only screen and (min-width: 740px) {
+            flex: 1 0 auto;
+        }
     }
 
     &__slide-arrow {
         position: relative;
         z-index: 1;
+        color: var(--green);
+        border: none;
+        background-color: transparent;
+        font-size: 2.4rem;
     }
 
     &__pips {
@@ -41,5 +52,10 @@
         padding: 0;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
+        gap: $gutter-width;
+    }
+
+    &__partner-item {
     }
 }
