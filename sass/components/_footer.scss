@@ -1,5 +1,6 @@
 .footer {
     $two-cols-width: get-width(2, $trailing-gutter:true);
+    $three-cols-width: get-width(3, $trailing-gutter:true);
 
     background-color: var(--purple);
     padding: 11.2rem 0 4.6rem;
@@ -16,22 +17,50 @@
     }
 
     &__brand {
-        width: $two-cols-width;
+        width: get-width(6);
+
+        @media only screen and (min-width: 830px) {
+            width: $three-cols-width;
+        }
+
+        @media only screen and (min-width: 1156px) {
+            width: $two-cols-width;
+        }
     }
 
     &__main-nav {
         margin-bottom: 8.3rem;
+        display: flex;
+        flex-wrap: wrap;
 
         &-section {
-            width: $two-cols-width;
+            margin-bottom: 6rem;
+            margin-top: 4rem;
+            width: 100%;
+
+            @media only screen and (min-width: 450px) {
+                margin-top: 0;
+                width: get-width(6);
+            }
+
+            @media only screen and (min-width: 830px) {
+                margin-bottom: 0;
+                width: $three-cols-width;
+
+                &--last {
+                    width: get-width(3);
+                }
+            }
+
+            @media only screen and (min-width: 1156px) {
+                width: $two-cols-width;
+            }
         }
 
         &-header {
             color: var(--green);
             margin-bottom: 4.1rem;
         }
-
-        display: flex;
     }
 
     &__wrap {
@@ -39,13 +68,21 @@
     }
 
     &__social {
-        width: $two-cols-width;
-        margin-left: get-offset(2, $leading-gutter: true);
+        width: 100%;
+        margin-top: 6rem;
+
+        @media only screen and (min-width: 830px) {
+            margin-left: get-offset(3);
+        }
+
+        @media only screen and (min-width: 1156px) {
+            margin-top: 0;
+            width: $two-cols-width;
+            margin-left: get-offset(2, $leading-gutter: true);
+        }
     }
 
     &__bottom {
-        // display: flex;
-        // align-items: flex-end;
     }
 
     &__copyright {
@@ -59,15 +96,26 @@
 
     &__subscribe {
         margin: 2.9rem 0;
+        width: 21rem;
     }
 
     &__bottom-nav {
         &-list {
             display: flex;
             align-items: flex-end;
+            gap: $gutter-width;
+
+            @media only screen and (min-width: 1156px) {
+                gap: 0;
+            }
 
             > li {
-                width: $two-cols-width;
+                width: $three-cols-width;
+
+                @media only screen and (min-width: 1156px) {
+                    width: $two-cols-width;
+
+                }
             }
         }
     }
