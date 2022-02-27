@@ -13,6 +13,11 @@
         animation-name: slide-from-right;
         left: 1000px;
     }
+
+    &--slide-from-left {
+        animation-name: slide-from-left;
+        left: -1000px;
+    }
 }
 
 @keyframes fade-slide {
@@ -31,6 +36,18 @@
   from {
     opacity: 0;
     left: 1000px;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    left: -1000px;
   }
 
   to {

@@ -39,6 +39,7 @@
         max-width: 55.7rem;
         margin: auto;
         padding: 4rem 0 6rem 4rem;
+        animation-delay: 500ms;
 
         @media only screen and (min-width: 540px) {
             width: get-width(10);

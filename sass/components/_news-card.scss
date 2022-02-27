@@ -14,6 +14,15 @@
         calc(100% - var(--h-warp)) 100%,
         0% calc(100% - var(--v-warp)));
 
+    &:nth-child(2) {
+        animation-delay: 250ms;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 500ms;
+    }
+
+
     &__category {
         color: black;
         font-size: 2.4rem;
