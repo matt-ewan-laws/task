@@ -79,6 +79,12 @@ li {
     // font-weight: 500;
 }
 
+.link {
+    font-size: 1.8rem;
+    color: var(--green);
+    font-weight: bold;
+}
+
 .underline {
     $overwidth: 5px;
     position: relative;
