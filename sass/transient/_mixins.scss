@@ -17,9 +17,10 @@
 
 }
 
-@mixin block-clip($slant: 2rem, $left-side: false, $is-top: false) {
+@mixin block-clip($slant: 2rem, $is-left: false, $is-top: false) {
     @if $is-top {
-        @if $left-side {
+        margin-top: calc(0px - #{$slant});
+        @if $is-left {
             clip-path: polygon(
                 0% 0%,
                 100% #{$slant},
@@ -33,7 +34,8 @@
                 0% 100%);
         }
     } @else { // bottom slant
-        @if $left-side {
+        margin-bottom: calc(0px - #{$slant});
+        @if $is-left {
             clip-path: polygon(
                 0% 0%,
                 100% 0%,
