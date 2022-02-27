@@ -1,0 +1,40 @@
+.js-animate-in {
+    opacity: 0;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-name: fade-slide;
+    animation-duration: 500ms;
+
+    &--show {
+        animation-play-state: running;
+    }
+
+    &--slide-from-right {
+        animation-name: slide-from-right;
+        left: 1000px;
+    }
+}
+
+@keyframes fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    left: 1000px;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}

@@ -1,3 +1,21 @@
+//////// IN VIEWPORT
+//
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    const { top, bottom } = rect
+    const height = (window.innerHeight || document.documentElement.clientHeight)
+    return (
+        rect.top < ((window.innerHeight || document.documentElement.clientHeight) - 200)
+    );
+}
+
+function showOnView(el) {
+    if (isInViewport(el)) {
+        console.log('inside')
+        el.classList.add('js-animate-in--show')
+    }
+}
+
 //////// NAV
 //
 function initNav() {
@@ -92,4 +110,11 @@ function initSliders() {
 document.body.onload = () => {
   initNav()
   initSliders()
+
+  const els = document.querySelectorAll('.js-animate-in')
+  els.forEach(showOnView)
+
+  document.body.onscroll = function() {
+      els.forEach(showOnView)
+  }
 }
