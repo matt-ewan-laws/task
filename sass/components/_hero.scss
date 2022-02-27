@@ -1,11 +1,7 @@
 .hero {
-    --slant: 2vw;
-
     color: var(--purple);
-    margin-bottom: calc(0px - var(--slant));
 
     &__clip {
-        @include block-clip($slant: var(--slant), $left-side: true);
         padding: 11.6rem 0 6.3rem;
         padding-bottom: 6.3rem;
         background-color: var(--green);
