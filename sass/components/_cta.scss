@@ -12,9 +12,16 @@
     &__card {
         padding: 11.3rem 7.6rem 10rem;
         background-color: var(--yellow);
-        width: get-width(6);
         margin: auto;
         text-align: center;
+
+        @media only screen and (min-width: 768px) {
+            width: get-width(8);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            width: get-width(6);
+        }
     }
 
     &__heading {
