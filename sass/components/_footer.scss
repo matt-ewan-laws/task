@@ -29,16 +29,22 @@
     }
 
     &__main-nav {
-        margin-bottom: 8.3rem;
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 2rem;
+
+        @media only screen and (min-width: 600px) {
+            margin-bottom: 8.3rem;
+        }
 
         &-section {
-            margin-bottom: 6rem;
-            margin-top: 4rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             width: 100%;
 
             @media only screen and (min-width: 450px) {
+                margin-top: 4rem;
+                margin-bottom: 6rem;
                 margin-top: 0;
                 width: get-width(6);
             }
@@ -69,9 +75,10 @@
 
     &__social {
         width: 100%;
-        margin-top: 6rem;
+        margin-top: 4rem;
 
         @media only screen and (min-width: 830px) {
+            margin-top: 6rem;
             margin-left: get-offset(3);
         }
 
@@ -103,14 +110,27 @@
         &-list {
             display: flex;
             align-items: flex-end;
-            gap: $gutter-width;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @media only screen and (min-width: 845px) {
+            }
 
             @media only screen and (min-width: 1156px) {
                 gap: 0;
             }
 
             > li {
-                width: $three-cols-width;
+                margin-top: 2rem;
+                width: 100%;
+
+                @media only screen and (min-width: 450px) {
+                    width: get-width(6);
+                }
+
+                @media only screen and (min-width: 845px) {
+                    width: $three-cols-width;
+                }
 
                 @media only screen and (min-width: 1156px) {
                     width: $two-cols-width;
