@@ -7,10 +7,17 @@
     }
 
     &__header {
-        margin-bottom: 9rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        margin-bottom: 5rem;
+
+        @media only screen and (min-width: 400px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        @media only screen and (min-width: 700px) {
+            margin-bottom: 9rem;
+        }
     }
 
     &__title {
@@ -19,5 +26,8 @@
 
     &__cards {
         display: flex;
+        gap: $gutter-width;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

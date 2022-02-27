@@ -1,12 +1,10 @@
 .news-card {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    width: get-width(4);
-
-    &:not(:last-child) {
-        margin-right: $gutter-width;
-    }
+    flex-wrap: wrap;
+    width: 38.6rem;
+    min-height: 50rem;
+    text-align: center;
 
     &__category {
         color: black;
@@ -27,7 +25,9 @@
     }
 
     &--middle {
-        transform: translateY(8rem);
+        @media only screen and (min-width: 1280px) {
+            transform: translateY(8rem);
+        }
     }
 
     &--text {
