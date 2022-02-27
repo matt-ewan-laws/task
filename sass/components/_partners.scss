@@ -1,7 +1,10 @@
 .partners {
     --side-padding: 2rem;
+
     color: var(--green);
     margin: 10rem 0;
+
+    @include block-clip($slant: 2vw, $is-top: true, $is-left: true);
 
     @media only screen and (min-width: 830px) {
         --side-padding: 6.2rem;
@@ -13,11 +16,11 @@
         padding: 0 var(--site-padding);
         background-color: white;
         padding: 10rem var(--side-padding) 8rem;
-
     }
 
     &__title {
         text-align: center;
+        margin-bottom: 4rem;
     }
 
     &__slider-container {
@@ -28,6 +31,7 @@
     }
 
     &__slider {
+        min-height: 10rem;
         @media only screen and (min-width: 740px) {
             flex: 1 0 auto;
         }
@@ -44,6 +48,7 @@
 
     &__pips {
         text-align: center;
+        margin-top: 4rem;
     }
 
     &__partner-list {
@@ -52,8 +57,10 @@
         padding: 0;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
         gap: $gutter-width;
+        min-height: 100%;
     }
 
     &__partner-item {

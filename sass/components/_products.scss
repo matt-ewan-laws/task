@@ -3,6 +3,8 @@
     color: white;
     padding: 4rem 0;
 
+    @include block-clip($slant: 3vw, $is-top: true);
+
     @media only screen and (min-width: 768px) {
         padding: 20rem 0;
     }

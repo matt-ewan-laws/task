@@ -1,6 +1,7 @@
 .news {
     background-color: white;
     padding: 11rem 0 19rem;
+    @include block-clip($slant: 3vw, $is-top: true, $is-left: true);
 
     &__wrap {
         @include wrap();

@@ -1,5 +1,8 @@
 .testimonials {
     padding: 6rem 0 5rem;
+    background-color: var(--white);
+
+    @include block-clip($slant: 3vw, $is-top: true);
 
     @media only screen and (min-width: 768px) {
         padding: 17.73rem 0 10rem;

@@ -5,6 +5,14 @@
     width: 38.6rem;
     min-height: 50rem;
     text-align: center;
+    --h-warp: 3px;
+    --v-warp: 5px;
+
+    clip-path: polygon(
+        var(--h-warp) var(--v-warp),
+        100% 0%,
+        calc(100% - var(--h-warp)) 100%,
+        0% calc(100% - var(--v-warp)));
 
     &__category {
         color: black;

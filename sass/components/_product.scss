@@ -6,6 +6,16 @@
     display: flex;
     flex-direction: column;
 
+    --v-warp: 3px;
+    --h-warp: 5px;
+
+    clip-path: polygon(
+        0% 0%,
+        calc(100% - var(--h-warp)) var(--v-warp),
+        100% calc(100% - var(--v-warp)),
+        var(--h-warp) 100%);
+
+
     &__header {
         color: var(--purple);
         display: flex;

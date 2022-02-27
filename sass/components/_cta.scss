@@ -5,6 +5,8 @@
     color: var(--purple);
     padding: 9rem 0 8.3rem;
 
+    @include block-clip($slant: 2vw, $is-top: true);
+
     &__wrap {
         @include wrap();
     }

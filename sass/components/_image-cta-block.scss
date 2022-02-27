@@ -1,8 +1,11 @@
 .image-cta-block {
+    background-color: white;
     background-image: url('/images/backgrounds/white-purple.svg');
     background-position: center center;
     padding: 0 2rem;
     position: relative;
+
+    @include block-clip($slant: 2vw, $is-top: true, $is-left: true);
 
     &__wrap {
         max-width: $max-width;

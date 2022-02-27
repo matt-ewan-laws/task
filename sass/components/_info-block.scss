@@ -1,7 +1,12 @@
 .info-block {
+    --slant: 2vw;
+
+    background-color: white;
     background-image: url('/images/backgrounds/white-purple.svg');
     background-position: center center;
     height: initial;
+
+    @include block-clip($slant: var(--slant), $is-top: true, $is-left: true);
 
     @media only screen and (min-width: 1050px) {
         height: 97.3rem;

@@ -2,6 +2,8 @@
     $two-cols-width: get-width(2, $trailing-gutter:true);
     $three-cols-width: get-width(3, $trailing-gutter:true);
 
+    @include block-clip($slant: 3vw, $is-top: true, $is-left: true);
+
     background-color: var(--purple);
     padding: 11.2rem 0 4.6rem;
     color: white;
