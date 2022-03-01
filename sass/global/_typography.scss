@@ -83,6 +83,24 @@ li {
     font-size: 1.8rem;
     color: var(--green);
     font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    &:after {
+        font-family: "Font Awesome 6 Free";
+        display: inline-block;
+        font-weight: 900;
+        content: '\f30b';
+        margin-left: 10px;
+        transition: all 200ms;
+    }
+
+    &:hover {
+        &:after {
+            margin-left: 20px;
+        }
+
+    }
 }
 
 .underline {
