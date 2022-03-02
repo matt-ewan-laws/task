@@ -16,6 +16,16 @@ function showOnView(el) {
     }
 }
 
+function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+
+function enableScrolling(){
+    window.onscroll=function(){};
+}
+
 //////// NAV
 //
 function initNav() {
@@ -27,13 +37,15 @@ function initNav() {
     const nav = document.querySelector('.main-nav')
 
     if (parseInt(btn.dataset.isOpen)) {
-        btn.classList.remove('menu-icon--open')
-        nav.classList.remove('main-nav--open')
-        btn.dataset.isOpen = "0"
+      btn.classList.remove('menu-icon--open')
+      nav.classList.remove('main-nav--open')
+      btn.dataset.isOpen = "0"
+      enableScrolling()
     } else {
-        btn.classList.add('menu-icon--open')
-        nav.classList.add('main-nav--open')
-        btn.dataset.isOpen = "1"
+      btn.classList.add('menu-icon--open')
+      nav.classList.add('main-nav--open')
+      disableScrolling()
+      btn.dataset.isOpen = "1"
     }
   })
 }

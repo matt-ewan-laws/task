@@ -12,9 +12,15 @@
     transform: translateX(100%);
     transition: all 200ms;
     gap: 7rem;
+    height: 100vh;
+
+    @media only screen and (min-width: 768px) {
+        height: initial;
+    }
 
     &--open {
         transform: translateX(0);
+        overflow-y: scroll;
     }
 
     &__list {
